@@ -1,0 +1,84 @@
+/* Custom polish on top of Tailwind */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Fraunces display tuning */
+.font-display {
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+/* Scroll reveal: start hidden, fade+rise in when .is-visible is added */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav backdrop when scrolled */
+#nav.scrolled {
+  background-color: rgba(250, 250, 247, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid #e7e5e4;
+}
+
+/* Remove default details marker */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+}
+
+/* Smooth underline transitions on anchor hover — handled via Tailwind where relevant */
+
+/* Placeholder image backdrop — subtle diagonal lines to distinguish from real images */
+.aspect-square > .absolute:first-child,
+.aspect-\[4\/5\] > .absolute:first-child {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 18px,
+      rgba(0, 0, 0, 0.025) 18px,
+      rgba(0, 0, 0, 0.025) 19px
+    );
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Form focus */
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Selection color */
+::selection {
+  background: #0a0a0a;
+  color: #fafaf7;
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal basketball training with a focus on fundamentals, confidence, and performance. Private sessions, small groups, and intensive camps." />
+  <title>[Coach Name] — Basketball Training</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0a0a0a',
+            paper: '#fafaf7',
+            accent: '#c2410c',
+            muted: '#78716c',
+            line: '#e7e5e4',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- ========== NAV ========== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
+      <a href="#top" class="font-display text-xl tracking-tight">
+        [Coach Name]
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-sm tracking-wide">
+        <a href="#about" class="hover:text-accent transition">About</a>
+        <a href="#programs" class="hover:text-accent transition">Programs</a>
+        <a href="#results" class="hover:text-accent transition">Results</a>
+        <a href="#testimonials" class="hover:text-accent transition">Voices</a>
+        <a href="#faq" class="hover:text-accent transition">FAQ</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 text-sm font-medium border border-ink px-5 py-2.5 rounded-full hover:bg-ink hover:text-paper transition">
+        Book a Session
+      </a>
+      <button id="navToggle" class="md:hidden p-2 -mr-2" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-line bg-paper">
+      <div class="px-6 py-6 flex flex-col gap-5 text-sm">
+        <a href="#about" class="hover:text-accent">About</a>
+        <a href="#programs" class="hover:text-accent">Programs</a>
+        <a href="#results" class="hover:text-accent">Results</a>
+        <a href="#testimonials" class="hover:text-accent">Voices</a>
+        <a href="#faq" class="hover:text-accent">FAQ</a>
+        <a href="#contact" class="inline-flex items-center gap-2 border border-ink px-5 py-2.5 rounded-full w-max">Book a Session</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="top" class="relative min-h-screen flex items-center pt-28 pb-20">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center w-full">
+      <div class="lg:col-span-7 reveal">
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-8">
+          Private Basketball Training · [City]
+        </p>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+          Train with purpose.<br />
+          <span class="italic text-accent">Play with confidence.</span>
+        </h1>
+        <p class="mt-8 text-lg text-muted max-w-xl leading-relaxed">
+          [Short positioning statement — one or two sentences about the coach's philosophy and the outcome students can expect. Placeholder to be replaced with real copy.]
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-ink text-paper px-7 py-3.5 rounded-full text-sm font-medium hover:bg-accent transition">
+            Book a Session
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#programs" class="inline-flex items-center gap-2 text-sm font-medium px-7 py-3.5 rounded-full border border-ink/20 hover:border-ink transition">
+            View Programs
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 reveal">
+        <div class="aspect-[4/5] bg-gradient-to-br from-stone-200 to-stone-300 rounded-2xl overflow-hidden relative shadow-sm">
+          <!-- Placeholder image block -->
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-sm tracking-wider uppercase">
+            Coach Portrait
+          </div>
+          <div class="absolute bottom-6 left-6 right-6 bg-paper/90 backdrop-blur rounded-xl p-5">
+            <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Head Coach</p>
+            <p class="font-display text-xl">[Coach Name]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] uppercase text-muted hidden lg:block">
+      Scroll
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-28 lg:py-40 border-t border-line">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16">
+        <div class="lg:col-span-4 reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">01 — About</p>
+          <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight">
+            A decade of the game, distilled into every session.
+          </h2>
+        </div>
+        <div class="lg:col-span-7 lg:col-start-6 reveal">
+          <p class="text-lg text-muted leading-relaxed mb-6">
+            [Paragraph about the coach's background — playing career, coaching philosophy, what makes their approach different. Replace with real biography.]
+          </p>
+          <p class="text-lg text-muted leading-relaxed">
+            [Second paragraph — specific expertise (e.g. guard development, shooting mechanics, defensive IQ), credentials, and the type of athlete they work best with.]
+          </p>
+
+          <div class="mt-12 grid grid-cols-3 gap-6 pt-10 border-t border-line">
+            <div>
+              <p class="font-display text-4xl">[10]<span class="text-accent">+</span></p>
+              <p class="text-sm text-muted mt-2">Years Coaching</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl">[300]<span class="text-accent">+</span></p>
+              <p class="text-sm text-muted mt-2">Athletes Trained</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl">[20]<span class="text-accent">+</span></p>
+              <p class="text-sm text-muted mt-2">Championships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROGRAMS ========== -->
+  <section id="programs" class="py-28 lg:py-40 border-t border-line bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-16 reveal">
+        <div>
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">02 — Programs</p>
+          <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-2xl">
+            Built around your game, not a template.
+          </h2>
+        </div>
+        <p class="text-muted max-w-md">
+          Every athlete is assessed individually. Programs scale from foundational fundamentals to elite performance refinement.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-line border border-line rounded-2xl overflow-hidden">
+        <!-- Card 1 -->
+        <article class="bg-white p-10 flex flex-col reveal">
+          <p class="text-xs tracking-[0.25em] uppercase text-accent mb-5">Most Popular</p>
+          <h3 class="font-display text-2xl mb-3">1-on-1 Private Training</h3>
+          <p class="text-muted leading-relaxed mb-8 flex-1">
+            Focused, personalized sessions designed around your specific goals — shooting, ball-handling, footwork, or decision-making.
+          </p>
+          <ul class="space-y-3 text-sm mb-10">
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 60 or 90 minute sessions</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Video review included</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Custom training plan</li>
+          </ul>
+          <div class="pt-6 border-t border-line flex items-baseline justify-between">
+            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
+            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ session</span></span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-white p-10 flex flex-col reveal">
+          <p class="text-xs tracking-[0.25em] uppercase text-muted mb-5">Group</p>
+          <h3 class="font-display text-2xl mb-3">Small Group Sessions</h3>
+          <p class="text-muted leading-relaxed mb-8 flex-1">
+            2 to 4 players training together. Competitive drills, game-situation reps, and camaraderie without sacrificing attention.
+          </p>
+          <ul class="space-y-3 text-sm mb-10">
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Max 4 athletes</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 90 minute sessions</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Skill-matched groupings</li>
+          </ul>
+          <div class="pt-6 border-t border-line flex items-baseline justify-between">
+            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
+            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ player</span></span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white p-10 flex flex-col reveal">
+          <p class="text-xs tracking-[0.25em] uppercase text-muted mb-5">Intensive</p>
+          <h3 class="font-display text-2xl mb-3">Skills Bootcamp</h3>
+          <p class="text-muted leading-relaxed mb-8 flex-1">
+            Multi-day intensive camps for serious athletes preparing for tryouts, tournaments, or a competitive season.
+          </p>
+          <ul class="space-y-3 text-sm mb-10">
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 3 to 5 day programs</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Scouting report included</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Seasonal cohorts</li>
+          </ul>
+          <div class="pt-6 border-t border-line flex items-baseline justify-between">
+            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
+            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ program</span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESULTS / GALLERY ========== -->
+  <section id="results" class="py-28 lg:py-40 border-t border-line">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="mb-16 reveal">
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">03 — Results</p>
+        <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-3xl">
+          Work that speaks for itself.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal">
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-xs tracking-[0.25em] uppercase">Photo 01</div>
+        </div>
+        <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden relative reveal md:row-span-2 md:aspect-auto">
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-xs tracking-[0.25em] uppercase">Photo 02</div>
+        </div>
+        <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal">
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-xs tracking-[0.25em] uppercase">Photo 03</div>
+        </div>
+        <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden relative reveal">
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-xs tracking-[0.25em] uppercase">Photo 04</div>
+        </div>
+        <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal md:col-span-1">
+          <div class="absolute inset-0 flex items-center justify-center text-muted text-xs tracking-[0.25em] uppercase">Photo 05</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="py-28 lg:py-40 border-t border-line bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="mb-16 reveal">
+        <p class="text-xs tracking-[0.3em] uppercase text-paper/60 mb-6">04 — Voices</p>
+        <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-3xl">
+          What athletes and families <span class="italic text-accent">say.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <figure class="reveal">
+          <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
+          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
+            "[Placeholder testimonial — a parent or athlete's story about how training with the coach changed their game, confidence, or trajectory.]"
+          </blockquote>
+          <figcaption class="text-sm text-paper/60">
+            <p class="font-medium text-paper">[Name]</p>
+            <p>[Role · High School]</p>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal">
+          <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
+          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
+            "[Second testimonial placeholder. Keep it under four lines so the grid stays balanced on desktop.]"
+          </blockquote>
+          <figcaption class="text-sm text-paper/60">
+            <p class="font-medium text-paper">[Name]</p>
+            <p>[Role · Club Team]</p>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal">
+          <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
+          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
+            "[Third testimonial placeholder — ideally from a different voice (parent vs player) to show range.]"
+          </blockquote>
+          <figcaption class="text-sm text-paper/60">
+            <p class="font-medium text-paper">[Name]</p>
+            <p>[Role · Middle School]</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="py-28 lg:py-40 border-t border-line">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="mb-16 reveal">
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">05 — FAQ</p>
+        <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight">
+          Questions, answered.
+        </h2>
+      </div>
+
+      <div class="divide-y divide-line border-y border-line">
+        <details class="group py-6 reveal">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-display text-xl">What age groups do you work with?</span>
+            <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-muted leading-relaxed">
+            [Placeholder answer. Typical range, any minimums, and whether adults are accepted.]
+          </p>
+        </details>
+
+        <details class="group py-6 reveal">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-display text-xl">Where do sessions take place?</span>
+            <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-muted leading-relaxed">
+            [Placeholder. Primary court / gym location, whether travel is possible, and any home-court options.]
+          </p>
+        </details>
+
+        <details class="group py-6 reveal">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-display text-xl">How are athletes evaluated before starting?</span>
+            <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-muted leading-relaxed">
+            [Placeholder. Describe the intake session or assessment process.]
+          </p>
+        </details>
+
+        <details class="group py-6 reveal">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-display text-xl">What is the cancellation and refund policy?</span>
+            <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-muted leading-relaxed">
+            [Placeholder. Notice period, credit vs refund policy.]
+          </p>
+        </details>
+
+        <details class="group py-6 reveal">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-display text-xl">Do you offer discounts for packages?</span>
+            <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-muted leading-relaxed">
+            [Placeholder. Package tiers, sibling discounts, team bookings.]
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="py-28 lg:py-40 border-t border-line bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">06 — Contact</p>
+          <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight mb-8">
+            Let's get to work.
+          </h2>
+          <p class="text-lg text-muted leading-relaxed mb-12 max-w-md">
+            Reach out with a bit about your athlete's age, current level, and goals. You'll hear back within one business day.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-5">
+              <div class="w-10 h-10 border border-line rounded-full flex items-center justify-center shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9 6 9-6M5 6h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Email</p>
+                <p class="font-medium">[coach@example.com]</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="w-10 h-10 border border-line rounded-full flex items-center justify-center shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Phone</p>
+                <p class="font-medium">[+1 (—) — ——]</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5">
+              <div class="w-10 h-10 border border-line rounded-full flex items-center justify-center shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Location</p>
+                <p class="font-medium">[City, State]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="reveal space-y-6 bg-paper border border-line rounded-2xl p-8 lg:p-10" onsubmit="event.preventDefault(); alert('Form submission placeholder — wire to Formspree / Netlify Forms / email service.')">
+          <div>
+            <label class="text-xs tracking-[0.25em] uppercase text-muted block mb-2">Name</label>
+            <input type="text" class="w-full bg-transparent border-b border-line py-3 focus:outline-none focus:border-ink transition" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="text-xs tracking-[0.25em] uppercase text-muted block mb-2">Email</label>
+            <input type="email" class="w-full bg-transparent border-b border-line py-3 focus:outline-none focus:border-ink transition" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label class="text-xs tracking-[0.25em] uppercase text-muted block mb-2">Athlete Age</label>
+            <input type="text" class="w-full bg-transparent border-b border-line py-3 focus:outline-none focus:border-ink transition" placeholder="e.g. 14" />
+          </div>
+          <div>
+            <label class="text-xs tracking-[0.25em] uppercase text-muted block mb-2">Goals</label>
+            <textarea rows="4" class="w-full bg-transparent border-b border-line py-3 focus:outline-none focus:border-ink transition resize-none" placeholder="Tell us a bit about what you're working toward."></textarea>
+          </div>
+          <button type="submit" class="inline-flex items-center gap-2 bg-ink text-paper px-7 py-3.5 rounded-full text-sm font-medium hover:bg-accent transition">
+            Send Inquiry
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-line py-12">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6 text-sm text-muted">
+      <p class="font-display text-ink">[Coach Name]</p>
+      <p>© <span id="year"></span> [Coach Name]. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-ink transition">Instagram</a>
+        <a href="#" class="hover:text-ink transition">YouTube</a>
+        <a href="#" class="hover:text-ink transition">WeChat</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
