@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-04-19 · Session 5 — Tailwind 迁移到预编译（修 Chrome 渲染差）
+
+- **问题**：用户反馈 Chrome 体验明显差于其他浏览器
+- **根因**：Tailwind **Play CDN**（`<script src="cdn.tailwindcss.com">`）在浏览器里运行时 JIT 编译 CSS——所有浏览器都会 FOUC，Chrome 因字体/CORS 策略更严格所以更明显
+- **解决**：迁移到 **Tailwind CLI v4 预编译**
+  - 新增 `package.json`（script: `build` / `dev` / `serve`）
+  - 新增 `src/input.css`（用 `@theme` 把原来 inline 的配色/字体 token 搬过来）
+  - 新增 `tailwind.css`（19KB 构建产物，由 CLI 生成，直接 link）
+  - `index.html` 移除 CDN script + inline config，改为 `<link href="tailwind.css">`
+  - `.gitignore` 追加 `node_modules/` 和 `package-lock.json`
+- **效果**：
+  - 零运行时编译 → 首屏即样式齐全，无 FOUC
+  - Chrome / Safari / Firefox / Edge / 手机浏览器表现一致
+  - 总 CSS 体积从 "CDN 脚本 + 运行时生成" 变成一个 19KB 静态文件
+- **开发流程更新**：
+  - 改样式 → 跑 `npm run build`（或开着 `npm run dev` 实时构建）
+  - 本地预览 → `npm run serve`（= `python3 -m http.server 8000`）
+- **仍待优化（非阻塞）**：图片尺寸 attr、favicon、OG 图、GA
+
 ## 2026-04-19 · Session 4 — Hero 图构图修正
 
 - **问题**：用户反馈 Hero 图位置不对，截图显示顶部一大条黑，主体被推到下方
