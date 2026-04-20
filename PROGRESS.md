@@ -4,6 +4,49 @@
 
 ---
 
+## 2026-04-19 · Session 4 — Hero 图构图修正
+
+- **问题**：用户反馈 Hero 图位置不对，截图显示顶部一大条黑，主体被推到下方
+- **根因**：两张 Tennessee 照片是 iPhone 截图（1170x2532），上下都有 iOS letterbox 黑边；`object-top` 把黑边顶到了视口上方
+- **解决**：
+  - 写 Python/PIL 脚本检测黑边并裁掉，原图备份在 `pic/_originals/`
+  - 朴素阈值法失败（底部 iOS home indicator 白条干扰检测）→ 改用**窗口平滑 dark% 法**（窗口 40 行，均值 ≥80% 暗判定为 letterbox），两张都干净裁出
+  - `career-01`: 2532 → 1734（裁掉顶 405 / 底 393）
+  - `career-02`: 2532 → 2095（裁掉顶 273 / 底 164）
+  - Hero `<img>` `object-top` 改回 `object-center`，现在主体居中
+- **经验沉淀**：未来如果用户再丢 iPhone 截图进来，直接跑 `pic/_originals/` 里备份的那套脚本即可复用
+
+## 2026-04-19 · Session 3 — 素材整理 + 真实信息注入
+
+- **用户新增**：`info/josh.md`（姓名/电话/地点）+ 6 张 jpg 散落在根目录
+- **图片归档到 `pic/`**（重命名以分组管理，`career-*` 是教练球员时期，`coaching-*` 是现在青训）：
+  - `career-01-tennessee-celebration.jpg` — Tennessee #25 赛后庆祝（用作 Hero 主视觉）
+  - `career-02-tennessee-vs-kansas.jpg` — Tennessee vs Kansas 对位
+  - `career-03-nike-allamerica-2004.jpg` — Nike All-America Camp 2004 合影
+  - `coaching-01-team-championship.jpg` — 青训队伍领奖合影（Frontier Eagle 场馆）
+  - `coaching-02-dribbling-drill.jpg` — 学员户外运球训练
+  - `coaching-03-summer-camp.jpg` — 夏令营合影
+- **index.html 更新**：
+  - `[Coach Name]` → Joshua Tabb（全局替换）
+  - `[City]` → St. Charles, MO
+  - 电话 → +1 (305) 923-7319
+  - Hero 占位图 → `career-01-tennessee-celebration.jpg`（4:5 竖构图适配）
+  - Results gallery 5 张全部接入真实照片（含一张竖图放在 row-span-2 高栏位）
+  - 所有 `<img>` 加了 `alt` 和 `loading="lazy"`
+  - `<title>` 加入 "St. Charles, MO" 利好本地 SEO
+- **仍为占位符（待用户补充）**：
+  - 邮箱 `[coach@example.com]`
+  - Hero / About 的一段式文案（建议突出 Tennessee D1 + Nike All-America 背景 → 建立权威）
+  - 3 门课程的价格
+  - 3 条学员/家长评价
+  - FAQ 5 条答案
+  - 社交媒体链接（Instagram / YouTube / WeChat）
+- **下一步建议**：
+  1. 让 Joshua 把邮箱和 Hero/About 两段英文 bio 发来，我来润色嵌入
+  2. 表单接入真实邮件收件（推荐 Formspree，免费额度够用）
+  3. 加 favicon（篮球小图标 SVG 内嵌即可）
+  4. 推到 GitHub 开 Pages 先跑起来
+
 ## 2026-04-19 · Session 2 — 骨架搭建完成
 
 - **用户决策确认**：
