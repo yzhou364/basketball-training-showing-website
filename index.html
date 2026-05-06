@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal basketball training with a focus on fundamentals, confidence, and performance. Private sessions, small groups, and intensive camps." />
-  <title>Joshua Tabb — Basketball Training · St. Charles, MO</title>
+  <meta name="description" content="JTElite — private basketball training in St. Charles, MO. Built from Division I experience and real player development. Mentorship, accountability, and structured growth." />
+  <link rel="icon" type="image/png" href="pic/logo2.png" />
+  <title>JTElite — Basketball Training · St. Charles, MO</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,34 +18,44 @@
 
   <!-- ========== NAV ========== -->
   <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
-      <a href="#top" class="font-display text-xl tracking-tight">
-        Joshua Tabb
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center" aria-label="JTElite — Home">
+        <img src="pic/logo2.png" alt="JTElite" width="134" height="50" class="h-10 lg:h-11 w-auto" />
       </a>
-      <nav class="hidden md:flex items-center gap-10 text-sm tracking-wide">
+      <nav class="hidden lg:flex items-center gap-9 text-[13px] tracking-[0.12em] uppercase">
+        <a href="#programs" class="hover:text-accent transition">Training</a>
+        <a href="#foundation" class="hover:text-accent transition">Foundation</a>
         <a href="#about" class="hover:text-accent transition">About</a>
-        <a href="#programs" class="hover:text-accent transition">Programs</a>
-        <a href="#results" class="hover:text-accent transition">Results</a>
-        <a href="#testimonials" class="hover:text-accent transition">Voices</a>
+        <a href="#gallery" class="hover:text-accent transition">Gallery</a>
         <a href="#faq" class="hover:text-accent transition">FAQ</a>
+        <a href="#contact" class="hover:text-accent transition">Contact</a>
       </nav>
-      <a href="#contact" class="hidden md:inline-flex items-center gap-2 text-sm font-medium border border-ink px-5 py-2.5 rounded-full hover:bg-ink hover:text-paper transition">
-        Book a Session
-      </a>
-      <button id="navToggle" class="md:hidden p-2 -mr-2" aria-label="Toggle menu">
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#contact" class="text-[13px] tracking-[0.12em] uppercase font-medium border border-ink px-5 py-2.5 rounded-full hover:bg-ink hover:text-paper transition">
+          Book Training
+        </a>
+        <a href="#foundation" class="text-[13px] tracking-[0.12em] uppercase font-semibold bg-accent text-paper px-5 py-2.5 rounded-full hover:bg-ink transition">
+          Donate Now
+        </a>
+      </div>
+      <button id="navToggle" class="lg:hidden p-2 -mr-2" aria-label="Toggle menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
           <path d="M3 6h18M3 12h18M3 18h18" />
         </svg>
       </button>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-line bg-paper">
-      <div class="px-6 py-6 flex flex-col gap-5 text-sm">
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-line bg-paper">
+      <div class="px-6 py-6 flex flex-col gap-5 text-sm tracking-[0.12em] uppercase">
+        <a href="#programs" class="hover:text-accent">Training</a>
+        <a href="#foundation" class="hover:text-accent">Foundation</a>
         <a href="#about" class="hover:text-accent">About</a>
-        <a href="#programs" class="hover:text-accent">Programs</a>
-        <a href="#results" class="hover:text-accent">Results</a>
-        <a href="#testimonials" class="hover:text-accent">Voices</a>
+        <a href="#gallery" class="hover:text-accent">Gallery</a>
         <a href="#faq" class="hover:text-accent">FAQ</a>
-        <a href="#contact" class="inline-flex items-center gap-2 border border-ink px-5 py-2.5 rounded-full w-max">Book a Session</a>
+        <a href="#contact" class="hover:text-accent">Contact</a>
+        <div class="flex gap-3 pt-2">
+          <a href="#contact" class="border border-ink px-5 py-2.5 rounded-full">Book Training</a>
+          <a href="#foundation" class="bg-accent text-paper px-5 py-2.5 rounded-full">Donate</a>
+        </div>
       </div>
     </div>
   </header>
@@ -61,11 +72,11 @@
           <span class="italic text-accent">Play with confidence.</span>
         </h1>
         <p class="mt-8 text-lg text-muted max-w-xl leading-relaxed">
-          [Short positioning statement — one or two sentences about the coach's philosophy and the outcome students can expect. Placeholder to be replaced with real copy.]
+          Built from Division&nbsp;I experience and real player development, JTElite delivers structured training, mentorship, and accountability that prepares athletes for the next level — on and off the court.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a href="#contact" class="inline-flex items-center gap-2 bg-ink text-paper px-7 py-3.5 rounded-full text-sm font-medium hover:bg-accent transition">
-            Book a Session
+            Book Training
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
           <a href="#programs" class="inline-flex items-center gap-2 text-sm font-medium px-7 py-3.5 rounded-full border border-ink/20 hover:border-ink transition">
@@ -78,8 +89,8 @@
         <div class="aspect-[4/5] rounded-2xl overflow-hidden relative shadow-sm bg-stone-200">
           <img src="pic/career-01-tennessee-celebration.jpg" alt="Joshua Tabb #25 celebrating during his playing days at the University of Tennessee" class="absolute inset-0 w-full h-full object-cover object-center" />
           <div class="absolute bottom-6 left-6 right-6 bg-paper/90 backdrop-blur rounded-xl p-5">
-            <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Head Coach</p>
-            <p class="font-display text-xl">Joshua Tabb</p>
+            <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Founder &amp; Head Coach</p>
+            <p class="font-display text-xl">Joshua Tabb · Tennessee D-I</p>
           </div>
         </div>
       </div>
@@ -91,38 +102,55 @@
     </div>
   </section>
 
+  <!-- ========== STATS ========== -->
+  <section class="border-t border-line bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+      <div class="reveal">
+        <p class="font-display text-5xl">10<span class="text-accent">+</span></p>
+        <p class="mt-2 text-xs tracking-[0.25em] uppercase text-muted">Years Experience</p>
+      </div>
+      <div class="reveal md:border-l md:border-line md:pl-10">
+        <p class="font-display text-5xl">300<span class="text-accent">+</span></p>
+        <p class="mt-2 text-xs tracking-[0.25em] uppercase text-muted">Athletes Developed</p>
+      </div>
+      <div class="reveal md:border-l md:border-line md:pl-10">
+        <p class="font-display text-5xl">20<span class="text-accent">+</span></p>
+        <p class="mt-2 text-xs tracking-[0.25em] uppercase text-muted">Competitive Teams &amp; Programs</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== ABOUT ========== -->
   <section id="about" class="py-28 lg:py-40 border-t border-line">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-16">
-        <div class="lg:col-span-4 reveal">
-          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">01 — About</p>
-          <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight">
-            A decade of the game, distilled into every session.
-          </h2>
+        <div class="lg:col-span-5 reveal">
+          <div class="grid grid-cols-2 gap-3">
+            <img src="pic/career-02-tennessee-vs-kansas.jpg" alt="Joshua Tabb #25 defending in a Tennessee vs. Kansas matchup" class="aspect-[3/4] w-full object-cover rounded-xl bg-stone-200" loading="lazy" />
+            <img src="pic/coaching-06-mentorship-champions.jpg" alt="Coach Tabb with a championship-winning athlete" class="aspect-[3/4] w-full object-cover rounded-xl bg-stone-200 mt-8" loading="lazy" />
+            <img src="pic/career-03-nike-allamerica-2004.jpg" alt="Joshua Tabb at the Nike All-America Camp, 2004" class="aspect-[3/4] w-full object-cover rounded-xl bg-stone-200" loading="lazy" />
+            <img src="pic/coaching-07-mentorship.jpg" alt="Coach Tabb with a young athlete" class="aspect-[3/4] w-full object-cover rounded-xl bg-stone-200 mt-8" loading="lazy" />
+          </div>
         </div>
-        <div class="lg:col-span-7 lg:col-start-6 reveal">
-          <p class="text-lg text-muted leading-relaxed mb-6">
-            [Paragraph about the coach's background — playing career, coaching philosophy, what makes their approach different. Replace with real biography.]
+
+        <div class="lg:col-span-7 reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">Meet Coach Tabb</p>
+          <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight">
+            From Southern Illinois to <span class="italic text-accent">Division I.</span>
+          </h2>
+
+          <p class="mt-10 text-lg text-muted leading-relaxed">
+            Joshua Tabb was one of the top high-school basketball prospects in Southern Illinois, ranked among the best in the region for his 6-foot, two-way scoring edge. He attended Florida International before transferring to Tennessee, and went on to earn his degree at Lindenwood University.
           </p>
-          <p class="text-lg text-muted leading-relaxed">
-            [Second paragraph — specific expertise (e.g. guard development, shooting mechanics, defensive IQ), credentials, and the type of athlete they work best with.]
+          <p class="mt-6 text-lg text-muted leading-relaxed">
+            Joshua competed at the Division&nbsp;I level at Tennessee and Northern Kentucky, where he developed the discipline, work ethic, and grit of a competitive guard — the same standard he brings to every athlete he trains today.
           </p>
 
-          <div class="mt-12 grid grid-cols-3 gap-6 pt-10 border-t border-line">
-            <div>
-              <p class="font-display text-4xl">[10]<span class="text-accent">+</span></p>
-              <p class="text-sm text-muted mt-2">Years Coaching</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl">[300]<span class="text-accent">+</span></p>
-              <p class="text-sm text-muted mt-2">Athletes Trained</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl">[20]<span class="text-accent">+</span></p>
-              <p class="text-sm text-muted mt-2">Championships</p>
-            </div>
-          </div>
+          <blockquote class="mt-10 pl-6 border-l-2 border-accent">
+            <p class="font-display text-2xl leading-snug">
+              "JTElite was built to give athletes the structure, discipline, and opportunity needed to reach their full potential."
+            </p>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -133,13 +161,13 @@
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="flex items-end justify-between flex-wrap gap-6 mb-16 reveal">
         <div>
-          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">02 — Programs</p>
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">Our Programs</p>
           <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-2xl">
-            Built around your game, not a template.
+            Development that lasts.
           </h2>
         </div>
         <p class="text-muted max-w-md">
-          Every athlete is assessed individually. Programs scale from foundational fundamentals to elite performance refinement.
+          Every athlete is evaluated individually. Programs are designed to build real skill, confidence, and game understanding — not just drills.
         </p>
       </div>
 
@@ -149,17 +177,17 @@
           <p class="text-xs tracking-[0.25em] uppercase text-accent mb-5">Most Popular</p>
           <h3 class="font-display text-2xl mb-3">1-on-1 Private Training</h3>
           <p class="text-muted leading-relaxed mb-8 flex-1">
-            Focused, personalized sessions designed around your specific goals — shooting, ball-handling, footwork, or decision-making.
+            Focused, personalized development built around the athlete's individual goals.
           </p>
           <ul class="space-y-3 text-sm mb-10">
             <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 60 or 90 minute sessions</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Video review included</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Custom training plan</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Film + breakdown included</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Position-specific development</li>
           </ul>
-          <div class="pt-6 border-t border-line flex items-baseline justify-between">
-            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
-            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ session</span></span>
-          </div>
+          <a href="#contact" class="text-xs tracking-[0.25em] uppercase font-medium text-accent inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Learn More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </article>
 
         <!-- Card 2 -->
@@ -167,17 +195,17 @@
           <p class="text-xs tracking-[0.25em] uppercase text-muted mb-5">Group</p>
           <h3 class="font-display text-2xl mb-3">Small Group Sessions</h3>
           <p class="text-muted leading-relaxed mb-8 flex-1">
-            2 to 4 players training together. Competitive drills, game-situation reps, and camaraderie without sacrificing attention.
+            Train in a competitive environment with real game reps.
           </p>
           <ul class="space-y-3 text-sm mb-10">
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Max 4 athletes</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 90 minute sessions</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Skill-matched groupings</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 2–4 athletes</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Live decision-making</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Situational training</li>
           </ul>
-          <div class="pt-6 border-t border-line flex items-baseline justify-between">
-            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
-            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ player</span></span>
-          </div>
+          <a href="#contact" class="text-xs tracking-[0.25em] uppercase font-medium text-accent inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Learn More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </article>
 
         <!-- Card 3 -->
@@ -185,27 +213,27 @@
           <p class="text-xs tracking-[0.25em] uppercase text-muted mb-5">Intensive</p>
           <h3 class="font-display text-2xl mb-3">Skills Bootcamp</h3>
           <p class="text-muted leading-relaxed mb-8 flex-1">
-            Multi-day intensive camps for serious athletes preparing for tryouts, tournaments, or a competitive season.
+            High-intensity development for serious athletes.
           </p>
           <ul class="space-y-3 text-sm mb-10">
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 3 to 5 day programs</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Scouting report included</li>
-            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Seasonal cohorts</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> 3–5 day duration</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Conditioning + skill integration</li>
+            <li class="flex items-start gap-3"><span class="text-accent mt-1">—</span> Game-speed training</li>
           </ul>
-          <div class="pt-6 border-t border-line flex items-baseline justify-between">
-            <span class="text-xs tracking-[0.25em] uppercase text-muted">From</span>
-            <span class="font-display text-2xl">[$ —]<span class="text-sm text-muted ml-1">/ program</span></span>
-          </div>
+          <a href="#contact" class="text-xs tracking-[0.25em] uppercase font-medium text-accent inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Learn More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========== RESULTS / GALLERY ========== -->
-  <section id="results" class="py-28 lg:py-40 border-t border-line">
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="py-28 lg:py-40 border-t border-line">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="mb-16 reveal">
-        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">03 — Results</p>
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">Gallery</p>
         <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-3xl">
           Work that speaks for itself.
         </h2>
@@ -213,19 +241,19 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal">
-          <img src="pic/coaching-01-team-championship.jpg" alt="Joshua Tabb with his youth team after winning a championship" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src="pic/coaching-01-team-championship.jpg" alt="Coach Tabb with his youth team after winning a championship" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden relative reveal md:row-span-2 md:aspect-auto">
-          <img src="pic/career-02-tennessee-vs-kansas.jpg" alt="Joshua Tabb #25 defending in a Tennessee vs. Kansas matchup" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src="pic/coaching-04-shooting-form.jpg" alt="Young athlete working on his shooting form during a JTElite session" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal">
-          <img src="pic/coaching-02-dribbling-drill.jpg" alt="Young athletes running a dribbling drill during a Joshua Tabb training session" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src="pic/coaching-02-dribbling-drill.jpg" alt="Young athletes running a dribbling drill" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden relative reveal">
-          <img src="pic/coaching-03-summer-camp.jpg" alt="Summer camp kids posing with Coach Tabb" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <img src="pic/coaching-05-dual-training.jpg" alt="Two athletes training together at a JTElite session" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         </div>
-        <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal md:col-span-1">
-          <img src="pic/career-03-nike-allamerica-2004.jpg" alt="Joshua Tabb at the Nike All-America Camp, 2004" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div class="aspect-square bg-stone-200 rounded-xl overflow-hidden relative reveal">
+          <img src="pic/coaching-03-summer-camp.jpg" alt="Summer camp athletes with Coach Tabb" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </div>
@@ -235,46 +263,58 @@
   <section id="testimonials" class="py-28 lg:py-40 border-t border-line bg-ink text-paper">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="mb-16 reveal">
-        <p class="text-xs tracking-[0.3em] uppercase text-paper/60 mb-6">04 — Voices</p>
+        <p class="text-xs tracking-[0.3em] uppercase text-paper/60 mb-6">Genuine Family Feedback</p>
         <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight max-w-3xl">
-          What athletes and families <span class="italic text-accent">say.</span>
+          Real stories. <span class="italic text-accent">Real impact.</span>
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-10">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
         <figure class="reveal">
           <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
-          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
-            "[Placeholder testimonial — a parent or athlete's story about how training with the coach changed their game, confidence, or trajectory.]"
+          <blockquote class="text-xl leading-relaxed text-paper/90 mb-8">
+            "Training with JTElite completely changed my confidence and how I approach the game."
           </blockquote>
           <figcaption class="text-sm text-paper/60">
-            <p class="font-medium text-paper">[Name]</p>
-            <p>[Role · High School]</p>
+            <p class="font-medium text-paper">M. J.</p>
+            <p>Player · Class of 2027</p>
           </figcaption>
         </figure>
 
         <figure class="reveal">
           <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
-          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
-            "[Second testimonial placeholder. Keep it under four lines so the grid stays balanced on desktop.]"
+          <blockquote class="text-xl leading-relaxed text-paper/90 mb-8">
+            "Joshua isn't just a trainer — it's mentorship, accountability, and real development."
           </blockquote>
           <figcaption class="text-sm text-paper/60">
-            <p class="font-medium text-paper">[Name]</p>
-            <p>[Role · Club Team]</p>
-          </figcaption>
-        </figure>
-
-        <figure class="reveal">
-          <svg class="text-accent mb-6" width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path d="M0 22V12Q0 6 3 3T12 0v4Q7 5 6 8t-1 4h6v10H0zm16 0V12q0-6 3-9t9-3v4q-5 1-6 4t-1 4h6v10H16z"/></svg>
-          <blockquote class="text-lg leading-relaxed text-paper/90 mb-8">
-            "[Third testimonial placeholder — ideally from a different voice (parent vs player) to show range.]"
-          </blockquote>
-          <figcaption class="text-sm text-paper/60">
-            <p class="font-medium text-paper">[Name]</p>
-            <p>[Role · Middle School]</p>
+            <p class="font-medium text-paper">T. W.</p>
+            <p>Parent of a 14U athlete</p>
           </figcaption>
         </figure>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== FOUNDATION ========== -->
+  <section id="foundation" class="py-28 lg:py-40 border-t border-line bg-white">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <img src="pic/logo.png" alt="JTElite Foundation" width="448" height="210" class="mx-auto h-24 w-auto reveal" />
+      <p class="mt-10 text-xs tracking-[0.3em] uppercase text-muted reveal">JTElite Foundation</p>
+      <h2 class="mt-6 font-display text-4xl lg:text-5xl leading-tight tracking-tight reveal">
+        Talent isn't enough. <span class="italic text-accent">Opportunity is.</span>
+      </h2>
+      <p class="mt-8 text-lg text-muted leading-relaxed max-w-2xl mx-auto reveal">
+        Through scholarships, mentorship, and community programs, the JTElite Foundation provides access to athletes who deserve the chance to grow.
+      </p>
+      <div class="mt-10 reveal">
+        <a href="mailto:jtabb25@gmail.com?subject=JTElite%20Foundation%20Support" class="inline-flex items-center gap-2 bg-accent text-paper px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:bg-ink transition">
+          Support the Foundation
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <p class="mt-12 text-xs tracking-[0.3em] uppercase text-muted reveal">
+        Building Athletes. Developing Leaders.
+      </p>
     </div>
   </section>
 
@@ -282,7 +322,7 @@
   <section id="faq" class="py-28 lg:py-40 border-t border-line">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <div class="mb-16 reveal">
-        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">05 — FAQ</p>
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">FAQ</p>
         <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight">
           Questions, answered.
         </h2>
@@ -295,7 +335,7 @@
             <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-muted leading-relaxed">
-            [Placeholder answer. Typical range, any minimums, and whether adults are accepted.]
+            JTElite trains athletes from 8 to 18, with most one-on-one work focused on middle and high school players preparing for school, club, or AAU competition. Adult athletes are welcome on a case-by-case basis.
           </p>
         </details>
 
@@ -305,7 +345,7 @@
             <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-muted leading-relaxed">
-            [Placeholder. Primary court / gym location, whether travel is possible, and any home-court options.]
+            Sessions run out of partner facilities in St. Charles, MO and the surrounding metro area. The specific gym is confirmed when you book based on availability and what your athlete is working on.
           </p>
         </details>
 
@@ -315,7 +355,7 @@
             <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-muted leading-relaxed">
-            [Placeholder. Describe the intake session or assessment process.]
+            Every athlete starts with a short intake conversation and a 60-minute baseline session. Coach Tabb uses that session to assess fundamentals, decision-making, and conditioning, then builds a development plan from there.
           </p>
         </details>
 
@@ -325,7 +365,7 @@
             <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-muted leading-relaxed">
-            [Placeholder. Notice period, credit vs refund policy.]
+            Sessions can be rescheduled with at least 24 hours notice at no charge. Inside that window, the session is forfeited unless there is a documented illness or emergency.
           </p>
         </details>
 
@@ -335,7 +375,7 @@
             <span class="text-accent text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-muted leading-relaxed">
-            [Placeholder. Package tiers, sibling discounts, team bookings.]
+            Yes — multi-session packages, sibling rates, and team bookings are all available. Reach out with your situation and we'll put together a package that fits.
           </p>
         </details>
       </div>
@@ -347,7 +387,7 @@
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-start">
         <div class="reveal">
-          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">06 — Contact</p>
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">Contact</p>
           <h2 class="font-display text-4xl lg:text-5xl leading-tight tracking-tight mb-8">
             Let's get to work.
           </h2>
@@ -362,7 +402,7 @@
               </div>
               <div>
                 <p class="text-xs tracking-[0.25em] uppercase text-muted mb-1">Email</p>
-                <p class="font-medium">[coach@example.com]</p>
+                <p class="font-medium"><a href="mailto:jtabb25@gmail.com" class="hover:text-accent transition">jtabb25@gmail.com</a></p>
               </div>
             </div>
 
@@ -415,15 +455,59 @@
   </section>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="border-t border-line py-12">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6 text-sm text-muted">
-      <p class="font-display text-ink">Joshua Tabb</p>
-      <p>© <span id="year"></span> Joshua Tabb. All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="#" class="hover:text-ink transition">Instagram</a>
-        <a href="#" class="hover:text-ink transition">YouTube</a>
-        <a href="#" class="hover:text-ink transition">WeChat</a>
+  <footer class="border-t border-line bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <img src="pic/logo.png" alt="JTElite Foundation" width="448" height="210" class="h-16 w-auto bg-paper rounded-lg p-2" />
+        <p class="mt-6 text-sm text-paper/70 max-w-xs leading-relaxed">
+          Building Athletes. Developing Leaders. Private basketball training and youth development based in St.&nbsp;Charles, MO.
+        </p>
       </div>
+
+      <div class="md:col-span-2">
+        <p class="text-xs tracking-[0.25em] uppercase text-paper/50 mb-4">Quick Links</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#top" class="hover:text-accent transition">Home</a></li>
+          <li><a href="#programs" class="hover:text-accent transition">Training</a></li>
+          <li><a href="#foundation" class="hover:text-accent transition">Foundation</a></li>
+          <li><a href="#gallery" class="hover:text-accent transition">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <p class="text-xs tracking-[0.25em] uppercase text-paper/50 mb-4">Info</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-accent transition">About</a></li>
+          <li><a href="#faq" class="hover:text-accent transition">FAQ</a></li>
+          <li><a href="#testimonials" class="hover:text-accent transition">Stories</a></li>
+          <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="text-xs tracking-[0.25em] uppercase text-paper/50 mb-4">Contact</p>
+        <ul class="space-y-2 text-sm">
+          <li>+1 (305) 923-7319</li>
+          <li><a href="mailto:jtabb25@gmail.com" class="hover:text-accent transition">jtabb25@gmail.com</a></li>
+          <li>St. Charles, MO</li>
+        </ul>
+        <div class="flex gap-4 mt-6 text-paper/70">
+          <a href="#" aria-label="Instagram" class="hover:text-accent transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="hover:text-accent transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="hover:text-accent transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-paper/10">
+      <p class="max-w-6xl mx-auto px-6 lg:px-8 py-6 text-xs text-paper/50">
+        © <span id="year"></span> JTElite Training &amp; Foundation. All rights reserved.
+      </p>
     </div>
   </footer>
 

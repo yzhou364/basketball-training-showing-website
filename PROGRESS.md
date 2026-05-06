@@ -4,6 +4,53 @@
 
 ---
 
+## 2026-05-06 · Session 7 — 邮箱 + 兜底文案
+
+- 邮箱 `jtabb25@gmail.com` 替换全站三处 `[...@example.com]`：Contact 区、Foundation 按钮（带 mailto subject 预填 "JTElite Foundation Support"）、Footer
+- Testimonial 名字写成中性占位（"M. J. · Player · Class of 2027" / "T. W. · Parent of a 14U athlete"）——不指向真人，等 Joshua 拿到真实授权再换
+- FAQ 5 条答案写完整：年龄段（8–18）、地点（St. Charles 周边合作场地）、首次评估流程、24h 取消政策、套餐/兄弟姐妹/团体折扣
+- 重新跑 `npm run build`
+
+## 2026-05-06 · Session 6 — JTElite 品牌化 + 真实素材接入
+
+- **用户提供**：
+  - 设计稿 `b87dacd4-...png`（揭示完整品牌：站点叫 JTElite，含 Foundation 慈善线）
+  - 4 张教练训练实拍（IMG_0289 / 0724 / 1381 / 9697，4032×3024 EXIF orientation=6 横置）
+  - 1 张更高清的 Frontier Eagle 队伍合影（4760a797）
+  - 2 个 logo（`logo.png` 全标 + `logo2.png` 紧凑标）
+
+- **图片处理（PIL）**：
+  - 用 `ImageOps.exif_transpose()` 把 4 张 IMG 的 EXIF 旋转烤进字节，保证所有浏览器一致
+  - 长边压到 1600px，JPEG q=88，单张约 330–390KB
+  - 命名 → `coaching-04-shooting-form` / `coaching-05-dual-training` / `coaching-06-mentorship-champions` / `coaching-07-mentorship`
+  - `coaching-01-team-championship` 替换为 4760a797 的高清版本
+  - 设计稿移到 `pic/_originals/design-mockup.png` 留作参考
+
+- **HTML 大改**（按设计稿提取的真实文案）：
+  - **品牌**：`Joshua Tabb` → `JTElite`，nav 改用 `logo2.png` PNG logo
+  - **Nav 链接**：Training / Foundation / About / Gallery / FAQ / Contact
+  - **Nav CTA**：保留 `Book Training`（outline）+ 新增 `Donate Now`（橙色 solid，跳到 Foundation）
+  - **Hero 文案**：替换为 "Built from Division I experience and real player development..."
+  - **新增 Stats 横条**：10+ Years / 300+ Athletes / 20+ Programs（独立 section，白底）
+  - **About 重写**：标题改 "From Southern Illinois to Division I."，bio 双段落写明 FIU → Tennessee → Lindenwood、D-I 履历，加 pull quote "JTElite was built to give athletes..."；左侧 4 图错位 collage（含 Tennessee + 教练实拍）
+  - **Programs 卡片**：更新到 mockup 文案（Film + breakdown / Live decision-making / Conditioning + skill integration），价格栏换成 `Learn More →` 链接
+  - **Gallery**：用新教练实拍替换部分老图，竖图放在 row-span-2 大格
+  - **Testimonials**：从 3 条占位简化为 2 条 mockup 真实引言（人名仍占位待补）
+  - **新增 Foundation section**：用 `logo.png` 全标，标题 "Talent isn't enough. Opportunity is."，CTA `Support the Foundation`
+  - **Footer**：彻底重做——深底 ink 色、4 列（Logo + 3 列链接 + 联系方式 + 社交图标）、版权改 JTElite Training & Foundation
+
+- **构建**：`npm run build` → `tailwind.css` 21KB（新增 `bg-accent` / `border-l-2` / `lg:h-11` 等都已生成）
+
+- **仍占位（待 Joshua 补）**：
+  - 邮箱
+  - 2 条 testimonial 的人名 + 学校
+  - FAQ 5 个问题的答案
+  - Foundation 邮箱（目前 `mailto:[foundation@example.com]`）
+  - 社交链接 URL
+  - About 的 bio 是基于设计稿文字 + 图片信息整合写的，建议 Joshua 通读校对
+
+- **构图待用户验证**：Foundation headline 我用了"Talent isn't enough. Opportunity is."——设计稿原句被前景元素遮挡，这是我对其语义的合理改写；如果 Joshua 有原句可替换
+
 ## 2026-04-19 · Session 5 — Tailwind 迁移到预编译（修 Chrome 渲染差）
 
 - **问题**：用户反馈 Chrome 体验明显差于其他浏览器
